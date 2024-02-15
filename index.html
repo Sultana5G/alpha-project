@@ -15,7 +15,7 @@
     <section id="home-screen" class="home min-h-screen text-white font-anton uppercase flex flex-col justify-center items-center">
         <div class="flex flex-col items-center gap-10"><h1 class="text-8xl">Alpha Clash Pro</h1>
             <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button onclick="play()" class="btn bg-white text-black">Play</button>
+            <button onclick="play()" class="btn bg-white text-black">Play now</button>
         </div>
     </section>
     <!-- playground -->
@@ -27,7 +27,7 @@
             <p class="bg-[#010313CC] text-white px-6 pb-4 rounded-b-xl">Don't watch keyboard  while playing...</p>
           </div>
          <div class="flex justify-center">
-          <p id="current-alphabet" class="text-black text-9xl font-bold h-full">Y</p>
+          <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
          </div>
          </div>
          <!-- screen end -->
@@ -68,28 +68,33 @@
               </div>
         </div>
         <!-- keyboard end -->
+        <!-- life score -->
         <div class="flex justify-between w-2/3">
-          <button onclick="play()" class="btn rounded-full bg-purple-300 text-white px-4">
+          <!-- display life -->
+          <button onclick="play()" class="btn rounded-full bg-purple-500 text-white px-4">
             Life
            <img src="./images/Group 23.png" alt="">
-           <span>1</span>
+           <span id="current-life">5</span>
           </button>
+          <!-- display score -->
           <button class="btn rounded-full bg-purple-700 text-white px-4">
-            Life
+            Score
            <img src="./images/monetization_on.png" alt="">
-           <span>1</span>
+
+           <span id="current-score">0</span>
           </button>
         </div>
-        <!-- life score -->
+      
        </div>
     </section>
-    <section class="score flex justify-center items-center min-h-screen hidden">
+    <section id="final-score" class="score flex justify-center items-center min-h-screen hidden">
       <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+        <h4 class="text-3xl">Game over</h4>
         <h1 class="text-8xl">
-          <span>Score:</span>
-          <span>14</span>
+          <span class="font font-extrabold">Score:</span>
+          <span id="last-score">14</span>
         </h1>
-        <button>Play Again</button>
+        <button onclick="play()" class="btn">Play Again</button>
         <p>Practice will make you a pro</p>
        
       </div>
